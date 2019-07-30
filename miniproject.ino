@@ -1,7 +1,7 @@
 #include <LiquidCrystal_I2C.h>       
 LiquidCrystal_I2C lcd(0x27,16,2);
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(9, 10);
+SoftwareSerial mySerial(10, 11);
 
  int buzzer = 13;
 int GASA0 = A0;
