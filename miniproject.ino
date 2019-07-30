@@ -10,7 +10,6 @@ int gasvalue;
 void setup() {
   
  lcd.init();                      
-lcd.init();
  lcd.backlight(); 
  mySerial.begin(9600);
  pinMode(buzzer, OUTPUT); 
