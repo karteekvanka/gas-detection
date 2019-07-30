@@ -9,11 +9,10 @@ int gasvalue;
 
 void setup() {
   
- lcd.init();                       // initialize the lcd
+ lcd.init();                      
 lcd.init();
  lcd.backlight(); 
  mySerial.begin(9600);
- //Serial.begin(9600);
  pinMode(buzzer, OUTPUT); 
  lcd.setCursor(3,0);
  lcd.print("welcome to"); 
@@ -33,7 +32,7 @@ void loop() {
   lcd.setCursor(12,0);
   lcd.print("%");
   
-  //Checks if it has reached the threshold value
+  
   if (gasvalue >= 10)
   {
     SendTextMessage();
@@ -54,13 +53,13 @@ void loop() {
 
 void SendTextMessage()
 {
-  Serial.println("AT+CMGF=1");    //To send SMS in Text Mode
+  Serial.println("AT+CMGF=1");   
   delay(1000);
-  Serial.println("AT+CMGS=\"+919347467670\"\r");  // change to the phone number you using
+  Serial.println("AT+CMGS=\"+919347467670\"\r"); 
   delay(1000);
-  Serial.println(" Gas is Leaking!");//the content of the message
+  Serial.println(" Gas is Leaking!");
   delay(200);
-  Serial.println((char)26);//the stopping character
+  Serial.println((char)26);
   delay(1000);
   
 }
